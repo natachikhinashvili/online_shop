@@ -1,0 +1,25 @@
+<body>
+    <h2>Authorization</h2>
+    <form id='Authorization' [formGroup]="signupform" action="">
+        <div class="form-group">
+            <label for="Email" class="item">
+                <h3>
+                    Email
+                </h3>
+            </label>
+            <input type="text" name=""  formControlName="email" class='Authorization-input item' id="">
+            <span class="error" *ngIf="this.signupform.controls['email'].status === 'INVALID'">Please enter your email!</span>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="item">
+                <h3>
+                    Password
+                </h3>
+            </label>
+            <input type="text" placeholder="" formControlName="password" class='Authorization-input item' name="" id="">
+            <span class="error" *ngIf="this.signupform.controls['password'].status === 'INVALID'">Please enter your password!</span>
+        </div>
+    <button id="sign-in" [disabled] ="!signupform.valid" (click)="login()">Sign in</button>
+    <button id="sign-up">Sign up</button>
+    </form>
+</body>

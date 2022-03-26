@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.search-bar{
+    width: 40vw;
+    border-radius: 0.4vw;
+    padding: 0.5vw;
+}
+.search-btn{
+    width: 8vw;
+    padding: 0.5vw;
+    border-radius: 0.4vw;
+    border: none;
+}
+button{
+    cursor: pointer;
+}
+#Categories, #account, #cart{
+    border-radius: 1vw;
+    border: none;
+    width: 8vw;
+    height: 5vh;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

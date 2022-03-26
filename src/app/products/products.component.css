@@ -1,0 +1,14 @@
+.add-cart-btn{
+    border: none;
+    padding: 1vw;
+    width: 10vw;
+    background-color: slateblue;
+    color: white;
+    border-radius:1.2vw;
+  }
+  body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }

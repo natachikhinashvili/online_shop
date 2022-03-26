@@ -1,0 +1,5 @@
+<div>cart</div>
+<div *ngFor="let product of incart">
+    {{ product.name }}
+</div>
+<button id='checkout-btn' routerLink="/checkout" routerLinkActive="active" >checkout</button>

@@ -1,0 +1,12 @@
+<body>  
+    <h1>{{product.name}}</h1>
+    <div *ngFor="let item of items" class="items">
+        <div *ngIf = 'item.name === product.name'>
+            <img src="../../assets/{{item.photoURL}}" class='item-pic' alt="">
+            <p>{{ item.price }}</p>
+        </div>
+    </div>
+    <button class='add-cart-btn' (click)="add()">
+        Add to cart
+    </button>
+</body>

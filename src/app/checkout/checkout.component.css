@@ -1,0 +1,29 @@
+#checkout-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 20vw;
+    height: 2vw;
+    font-size: 1em;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+label{
+    font-size: 1.2em;
+    padding: 1.2vw;
+}
+#confirm-checkout{
+    padding: 1vw;
+    background-color:cornflowerblue;
+    border: none;
+    color: white;
+    margin-top: 4vh;
+}

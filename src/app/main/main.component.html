@@ -1,0 +1,130 @@
+<header>
+  <div class="block-of-info">
+    <p class="block-of-info-item">
+      Tbilisi/Georgia
+    </p>
+    <p class="block-of-info-item">
+      open from 8:00 to 22:00
+    </p>
+
+    <div class="dropdown">
+      <button class="dropbtn">More</button>
+      <div class="dropdown-content">
+        <a href="#">Mail</a>
+        <a href="#">telegram</a>
+        <a href="#">+375 29 302 10 21</a>
+        <a href="#">write us</a>
+      </div>
+    </div>
+  </div>
+  </header>
+  <nav id='search-nav'>
+    <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >
+      RS Shop
+    </button>
+    <form #postForm="ngForm">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          ngModel
+          name="title"
+        />
+      </div>
+    </form>
+<div>
+  <button class='cart-btn' routerLink="/cart" routerLinkActive="active">cart</button>
+</div>
+    <button class='acc-btn' routerLink='/registration'>account</button>
+  </nav>
+<div id="nav">
+    <button [ngClass]="{'selected': selected === 'computers', 'notSelected':selected!=='computers'}"
+      (click) = "changeselect('computers')">
+        Computers
+    </button>
+    <button [ngClass]="{'selected': selected === 'phones', 'notSelected':selected!=='phones'}" (click) = "changeselect('phones')">phones</button>
+    <button [ngClass]="{'selected': selected === 'tvs', 'notSelected':selected!=='tvs'}"(click) = "changeselect('tvs')">TV</button>
+</div>
+  <body>
+    <div *ngIf="selected === ''">
+  <div *ngFor="let product of products" class="items">
+    <div [routerLink]="['/cart', product.name]" class="item">
+        <h3 [title]="product.name + ' details'">
+          {{ product.name}}
+        </h3>
+      <img src="../../assets/{{product.photoURL}}" class='item-pic' alt="">
+      <p>
+        {{ product.price }}
+      </p>
+
+    </div>
+      <button class='add-cart-btn' (click)="add(product.name, product.price, product.count)">
+        Add to cart
+      </button>
+  </div>
+</div>
+<div *ngIf="selected === 'phones'">
+  <div *ngFor="let phone of phones" class="items">
+    <div [routerLink]="['/cart', phone.name]" class="item">
+        <h3 [title]="phone.name + ' details'">
+          {{ phone.name}}
+        </h3>
+      <img src="../../assets/{{phone.photoURL}}" class='item-pic' alt="">
+      <p>
+        {{ phone.price }}
+      </p>
+
+    </div>
+      <button class='add-cart-btn' (click)="add(phone.name, phone.price, phone.count)">
+        Add to cart
+      </button>
+  </div>
+</div>
+<div *ngIf="selected === 'computers'">
+  <div *ngFor="let computer of computers" class="items">
+    <div [routerLink]="['/cart', computer.name]" class="item">
+        <h3 [title]="computer.name + ' details'">
+          {{ computer.name}}
+        </h3>
+      <img src="../../assets/{{computer.photoURL}}" class='item-pic' alt="">
+      <p>
+        {{ computer.price }}
+      </p>
+
+    </div>
+      <button class='add-cart-btn' (click)="add(computer.name, computer.price, computer.count)">
+        Add to cart
+      </button>
+  </div>
+</div>
+<div *ngIf="selected === 'tvs'">
+  <div *ngFor="let tv of tvs" class="items">
+    <div [routerLink]="['/cart', tv.name]" class="item">
+        <h3 [title]="tv.name + ' details'">
+          {{ tv.name}}
+        </h3>
+      <img src="../../assets/{{tv.photoURL}}" class='item-pic' alt="">
+      <p>
+        {{ tv.price }}
+      </p>
+
+    </div>
+      <button class='add-cart-btn' (click)="add(tv.name, tv.price, tv.count)">
+        Add to cart
+      </button>
+  </div>
+</div>
+  </body>
+  <footer>
+    <p class="block-of-info-item">
+      Tbilisi/Georgia
+    </p>
+    <p class="block-of-info-item">
+      open from 8:00 to 22:00
+    </p>
+    <a href="http://www.instagram.com" class="instagram">instagram</a>
+    <a href="http://www.facebook.com" class="fb">facebook</a>
+    <a href="http://www.twitter.com" class="twitter">twitter</a>
+  </footer>

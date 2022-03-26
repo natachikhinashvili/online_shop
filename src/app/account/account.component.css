@@ -1,0 +1,39 @@
+#Authorization{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Authorization-input{
+    margin-right: 2vw;
+    padding: 0.7vw;
+    width: 40vw;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    margin: 0.7vw;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+button{
+    width: 5vw;
+    padding: 0.5vw;
+    margin-top: 1vw;
+    border: none;
+}
+#sign-in{
+    background-color: slateblue;
+    color: white;
+}
+span{
+    margin-left: 1vw;
+}

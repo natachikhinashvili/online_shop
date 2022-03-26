@@ -1,0 +1,21 @@
+<body>
+    <h2>Checkout form</h2>
+    <form action="" [formGroup]="checkout" id="checkout-form">
+        <label for="">Full name</label>
+        <input type="text" formControlName="name" minlength="3" maxlength="50">
+        <span class="error" *ngIf="this.checkout.controls['name'].status === 'INVALID'">Required!</span>
+        <label for="">Delivery address</label>
+        <input type="text" formControlName="address" minlength="3" maxlength="250">
+        <span class="error" *ngIf="this.checkout.controls['address'].status === 'INVALID'">Required!</span>
+        <label for="">Phone number</label>
+        <input type="text" formControlName="phone-number">
+        <span class="error" *ngIf="this.checkout.controls['phone-number'].status === 'INVALID'">Required!</span>
+        <label for="">Desired delivery time</label>
+        <input type="date" formControlName="delievery-time">
+        <span class="error" *ngIf="this.checkout.controls['delievery-time'].status === 'INVALID'">Required!</span>
+        <label for="">Comment to order</label>
+        <input type="text" #name formControlName="Comment" maxlength="250">
+        <span class="error" *ngIf="this.checkout.controls['Comment'].status === 'INVALID'">Required!</span>
+    </form> 
+    <button routerLink="/order-confirmed" routerLinkActive="active" id='confirm-checkout'>Confirm</button>
+</body>
